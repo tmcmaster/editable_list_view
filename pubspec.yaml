@@ -1,7 +1,7 @@
-name: flutter_package_template
+name: editable_list_view
 description: A new Flutter package project.
 version: 0.0.1
-homepage: https://github.com/tmcmaster/flutter_package_template/blob/main/README.md
+homepage: https://github.com/tmcmaster/editable_list_view/blob/main/README.md
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -13,6 +13,9 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_workbench:
+    git:
+      url: https://github.com/tmcmaster/flutter_workbench.git
 
 dev_dependencies:
   flutter_test:

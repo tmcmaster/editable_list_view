@@ -1,4 +1,4 @@
-# flutter_package_template
+# editable_list_view
 Flutter widget testing widget for dynamically widgets at different sizes.
 
 # To change the package name
