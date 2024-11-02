@@ -65,7 +65,7 @@ class TodoItem extends HookWidget {
               decoration: BoxDecoration(
                 //color: Colors.yellow,
                 border: Border(
-                  top: BorderSide(
+                  bottom: BorderSide(
                     width: 1.0,
                     color: Colors.grey.shade400,
                   ),

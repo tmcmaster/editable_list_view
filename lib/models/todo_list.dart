@@ -2,9 +2,24 @@ import 'package:editable_list_view/models/todo.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';
 
+typedef FilterFunction = bool Function(Todo);
+
+enum TodoListFilter {
+  all,
+  active,
+  completed,
+}
+
 class TodoList extends StateNotifier<List<Todo>> {
   static final _uuid = Uuid();
 
+  static final Map<TodoListFilter, FilterFunction> FILTERS = {
+    TodoListFilter.all: (todo) => true,
+    TodoListFilter.completed: (todo) => todo.completed,
+    TodoListFilter.active: (todo) => !todo.completed,
+  };
+
+  // static FilterFunction getFilter
   TodoList([List<Todo>? initialTodos]) : super(initialTodos ?? []);
 
   void add(String description) {

@@ -1,7 +1,7 @@
 class Todo {
   Todo({
-    required this.description,
     required this.id,
+    required this.description,
     this.completed = false,
   });
 
